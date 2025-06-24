@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Sender Admin Panel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #0d47a1;
+    }
+
+    header {
+      background-color: #0d47a1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e3f2fd;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    input[type="text"] {
+      width: 95%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .status-pending {
+      color: #ff9800;
+      font-weight: bold;
+    }
+
+    .status-done {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📋 Admin Panel - Star Orders</h1>
+    <p>এখানে আপনি ম্যানুয়ালি অর্ডার ট্র্যাক করতে পারবেন</p>
+  </header>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>নাম</th>
+          <th>Facebook লিংক</th>
+          <th>স্টার প্যাকেজ</th>
+          <th>পেমেন্ট নাম্বার</th>
+          <th>স্টেটাস</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example Row -->
+        <tr>
+          <td><input type="text" placeholder="নাম লিখুন"></td>
+          <td><input type="text" placeholder="FB প্রোফাইল লিংক"></td>
+          <td><input type="text" placeholder="Ex: ১০০ স্টার - ৩০০৳"></td>
+          <td><input type="text" placeholder="017xxxxxxxx"></td>
+          <td>
+            <select>
+              <option class="status-pending">Pending</option>
+              <option class="status-done">Done</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Add More Rows As Needed -->
+        <tr>
+          <td><input type="text" placeholder="নাম লিখুন"></td>
+          <td><input type="text" placeholder="FB প্রোফাইল লিংক"></td>
+          <td><input type="text" placeholder="Ex: ২০০ স্টার - ৫৫০৳"></td>
+          <td><input type="text" placeholder="018xxxxxxxx"></td>
+          <td>
+            <select>
+              <option class="status-pending">Pending</option>
+              <option class="status-done">Done</option>
+            </select>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    &copy; 2025 Star Sender | শুধুমাত্র অ্যাডমিনদের জন্য পৃষ্ঠা
+  </footer>
+
+</body>
+</html>
